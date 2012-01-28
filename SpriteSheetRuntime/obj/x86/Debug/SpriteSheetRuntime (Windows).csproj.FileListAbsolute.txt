@@ -94,3 +94,9 @@ D:\Code\Rain\SpriteSheetRuntime\obj\x86\Debug\ResolveAssemblyReference.cache
 D:\Code\Rain\SpriteSheetRuntime\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 D:\Code\Rain\SpriteSheetRuntime\obj\x86\Debug\SpriteSheetRuntime.dll
 D:\Code\Rain\SpriteSheetRuntime\obj\x86\Debug\SpriteSheetRuntime.pdb
+C:\Users\Peace\Desktop\Rain\Rain\SpriteSheetRuntime\bin\x86\Debug\SpriteSheetRuntime.dll
+C:\Users\Peace\Desktop\Rain\Rain\SpriteSheetRuntime\bin\x86\Debug\SpriteSheetRuntime.pdb
+C:\Users\Peace\Desktop\Rain\Rain\SpriteSheetRuntime\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Peace\Desktop\Rain\Rain\SpriteSheetRuntime\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Peace\Desktop\Rain\Rain\SpriteSheetRuntime\obj\x86\Debug\SpriteSheetRuntime.dll
+C:\Users\Peace\Desktop\Rain\Rain\SpriteSheetRuntime\obj\x86\Debug\SpriteSheetRuntime.pdb

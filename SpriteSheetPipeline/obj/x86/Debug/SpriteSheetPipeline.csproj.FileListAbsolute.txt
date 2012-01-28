@@ -43,3 +43,8 @@ C:\Users\Latio\Documents\Visual Studio 2010\Projects\Kitty Crusade\Kitty Crusade
 C:\Users\Latio\Documents\Visual Studio 2010\Projects\Kitty Crusade\Kitty Crusade\SpriteSheetPipeline\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\Latio\Documents\Visual Studio 2010\Projects\Kitty Crusade\Kitty Crusade\SpriteSheetPipeline\obj\x86\Debug\SpriteSheetPipeline.dll
 C:\Users\Latio\Documents\Visual Studio 2010\Projects\Kitty Crusade\Kitty Crusade\SpriteSheetPipeline\obj\x86\Debug\SpriteSheetPipeline.pdb
+C:\Users\Peace\Desktop\Rain\Rain\SpriteSheetPipeline\bin\x86\Debug\SpriteSheetPipeline.dll
+C:\Users\Peace\Desktop\Rain\Rain\SpriteSheetPipeline\bin\x86\Debug\SpriteSheetPipeline.pdb
+C:\Users\Peace\Desktop\Rain\Rain\SpriteSheetPipeline\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Peace\Desktop\Rain\Rain\SpriteSheetPipeline\obj\x86\Debug\SpriteSheetPipeline.dll
+C:\Users\Peace\Desktop\Rain\Rain\SpriteSheetPipeline\obj\x86\Debug\SpriteSheetPipeline.pdb

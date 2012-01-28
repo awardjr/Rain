@@ -63,8 +63,12 @@ namespace Rain
             CGamePlayState _GamePlay = new CGamePlayState();
              _GamePlay.Enter();
             _StateMachine = new CStateMachine();
-            _StateMachine.PushState(_GamePlay);
+<<<<<<< HEAD
+            _StateMachine.PushState(_MainMenu);
 
+=======
+            _StateMachine.PushState(_GamePlay);
+>>>>>>> 79bffef36bc347bb6ccd994d7acba2bd41ec4fa7
             
         }
 

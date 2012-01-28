@@ -20,14 +20,24 @@ namespace Rain.Objects
         enum PlayerState { Stand, Walking, Jumping };
         Controller controller;
         Vector2 velocity;
+<<<<<<< HEAD:Player.cs
+        Boolean Jumpin;
+    //    Vector2 gravity;
+
+=======
         PlayerState state;
         int drops;
         
+>>>>>>> 79bffef36bc347bb6ccd994d7acba2bd41ec4fa7:Objects/Player.cs
         public Player(Vector2 initPos, AnimationTable initAnimationTable, Controller pController)
             : base(initPos, initAnimationTable, ObjectType.Player)
         {
             position = initPos;
             controller = pController;
+<<<<<<< HEAD:Player.cs
+            Jumpin = false;
+         //   gravity = new Vector2(0, 9.8f);
+=======
             scale = 0.2f;
             drops = 0;
         }
@@ -35,11 +45,15 @@ namespace Rain.Objects
         public void addDrop()
         {
             drops+=2;
+>>>>>>> 79bffef36bc347bb6ccd994d7acba2bd41ec4fa7:Objects/Player.cs
         }
 
         public override void update(GameTime gametime)
         {
+<<<<<<< HEAD:Player.cs
+=======
             scale = (drops * 0.01f) + 0.2f;
+>>>>>>> 79bffef36bc347bb6ccd994d7acba2bd41ec4fa7:Objects/Player.cs
             
             if (controller.keyHeld(Keys.Left))
             {
@@ -61,11 +75,32 @@ namespace Rain.Objects
             if(state == PlayerState.Stand)
                 this.setAnimation("stand");
 
+<<<<<<< HEAD:Player.cs
+            if (controller.keyPressed(Keys.Space) && Jumpin == false)
+            {
+                Jumpin = true;
+                velocity.Y = -30;
+            }
 
+         //   velocity += gravity;
+=======
+>>>>>>> 79bffef36bc347bb6ccd994d7acba2bd41ec4fa7:Objects/Player.cs
             position += velocity;
             velocity.X = 0;
 
-            
+            if (velocity.Y < 0)
+            {
+                velocity.Y += 1;
+            }
+            else if (Jumpin == true && position.Y >= 500)
+            {
+                Jumpin = false;
+            }
+
+            if (position.Y < 500)
+            {
+                position.Y += 1;
+            }
             
         }
     }
