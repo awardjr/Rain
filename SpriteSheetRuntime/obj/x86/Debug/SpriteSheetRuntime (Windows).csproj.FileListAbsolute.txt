@@ -88,3 +88,9 @@ C:\Users\Latio\Documents\Visual Studio 2010\Projects\Kitty Crusade\Kitty Crusade
 C:\Users\Latio\Documents\Visual Studio 2010\Projects\Kitty Crusade\Kitty Crusade\Kitty Crusade\SpriteSheetRuntime\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Latio\Documents\Visual Studio 2010\Projects\Kitty Crusade\Kitty Crusade\Kitty Crusade\SpriteSheetRuntime\obj\x86\Debug\SpriteSheetRuntime.dll
 C:\Users\Latio\Documents\Visual Studio 2010\Projects\Kitty Crusade\Kitty Crusade\Kitty Crusade\SpriteSheetRuntime\obj\x86\Debug\SpriteSheetRuntime.pdb
+D:\Code\Rain\SpriteSheetRuntime\bin\x86\Debug\SpriteSheetRuntime.dll
+D:\Code\Rain\SpriteSheetRuntime\bin\x86\Debug\SpriteSheetRuntime.pdb
+D:\Code\Rain\SpriteSheetRuntime\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Code\Rain\SpriteSheetRuntime\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\Code\Rain\SpriteSheetRuntime\obj\x86\Debug\SpriteSheetRuntime.dll
+D:\Code\Rain\SpriteSheetRuntime\obj\x86\Debug\SpriteSheetRuntime.pdb

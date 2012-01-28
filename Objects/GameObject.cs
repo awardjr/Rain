@@ -4,7 +4,7 @@ using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace Rain
+namespace Rain.Objects
 {
     class GameObject
     {
@@ -21,7 +21,9 @@ namespace Rain
         protected Boolean tested;
         protected SpriteEffects flipHorizontally;
         private Boolean solid = false;
-        private ObjectType type; 
+        private float initWidth;
+        private float initHeight;
+        private ObjectType type;
        
         AnimationTable animationTable;
 
@@ -38,6 +40,8 @@ namespace Rain
             remove = false;
             flipHorizontally = SpriteEffects.None;
             solid = false;
+            initWidth = animationTable.SpriteSourceRectangle.Width;
+            initHeight = animationTable.SpriteSourceRectangle.Height;
             type = pType;
         }
 
@@ -112,6 +116,18 @@ namespace Rain
             get { return position; }
             set { position = value; }
         }
+        public float Width
+        {
+            get { return initWidth * scale; }
+            set { initWidth = value; }
+        }
+        public float Height
+        {
+            get { return initHeight * scale; }
+            set { initHeight = value; }
+        }
+    
+
 
         public float Rotation
         {
@@ -173,9 +189,6 @@ namespace Rain
             get { return color * alpha; }
             set { color = value; }
         }
-
-
-        
     }
 }
 

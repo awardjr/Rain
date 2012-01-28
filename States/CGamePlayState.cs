@@ -15,7 +15,15 @@ namespace Rain
         }
         override public void Update(float fDTime, CStateMachine _SM) 
         {
-            
+           /* controller.update();
+
+            handleControls(gameTime);
+            player.update(gameTime);
+            foreach (KeyValuePair<String, Layer> layer in layers)
+            {
+                layers[layer.Key].update(gameTime);
+            }
+            updateCamera(gameTime);*/
         }
         override public void Render() { }
         override public void Exit() { }

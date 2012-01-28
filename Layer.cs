@@ -9,7 +9,7 @@
  * 
  -----------------------------------------*/
 
-#region Includes
+#region Using
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +22,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Net;
 using Microsoft.Xna.Framework.Storage;
+using Rain.Objects;
 #endregion
 
 namespace Rain
@@ -64,7 +65,6 @@ namespace Rain
 
                 if (objects[i].Remove)
                 {
-                    objects[i].unsetSolid();
                     objects.Remove(objects[i]);
 
                 }
@@ -99,7 +99,7 @@ namespace Rain
         //Get/Set Zorder
         public int ZOrder
         {
-            get { return layerZOrder; }
+            get { return layerZOrder * objects.Count; }
             set { layerZOrder = value; }
         }
 
@@ -112,8 +112,4 @@ namespace Rain
         }
 
     }
-
-
-
-
 }

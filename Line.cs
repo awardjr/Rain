@@ -19,8 +19,6 @@ namespace Rain
 {
     public class Line
     {
-
-        Texture2D blank;
         Vector2 point1;
         Vector2 point2;
 

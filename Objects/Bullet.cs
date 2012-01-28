@@ -13,7 +13,7 @@ using Microsoft.Xna.Framework.Net;
 using Microsoft.Xna.Framework.Storage;
 using SpriteSheetRuntime;
 
-namespace Rain
+namespace Rain.Objects
 {
    
 
