@@ -107,15 +107,11 @@ namespace Rain
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
-<<<<<<< HEAD
-
-=======
             
             // TODO: Add your update logic here
             _StateMachine.UpdateState(gameTime.ElapsedGameTime.Ticks);
            
             
->>>>>>> c3f63d43358d20ea2c7b9ce72a779c292af4be68
             controller.update();
 
             handleControls(gameTime);
