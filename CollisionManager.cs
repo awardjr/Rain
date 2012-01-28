@@ -24,7 +24,6 @@ namespace Rain
 
         public void addCollisionObject(GameObject obj)
         {
-            
             objects.Add(obj);
         }
 
@@ -35,25 +34,17 @@ namespace Rain
 
         public Vector2 testCollision(GameObject a, GameObject b)
         {
-
-            
                 Rectangle aRectangle = new Rectangle((int)a.Position.X, (int)a.Position.Y, (int)(a.AnimationTable.SpriteSourceRectangle.Width * a.Scale), (int)(a.AnimationTable.SpriteSourceRectangle.Height * a.Scale));
                 Rectangle bRectangle = new Rectangle((int)b.Position.X - 250, (int)b.Position.Y - 50, (int)(b.AnimationTable.SpriteSourceRectangle.Width * b.Scale), (int)(b.AnimationTable.SpriteSourceRectangle.Height * b.Scale));
 
-
                 return RectangleExtensions.GetIntersectionDepth(aRectangle, bRectangle);
-            
-           
-        
         }
 
         public List<GameObject> testCollision( GameObject a)
         {
             List<GameObject> hit = new List<GameObject>();
-
             Rectangle aRectangle = new Rectangle((int)a.Position.X, (int)a.Position.Y , a.AnimationTable.SpriteSourceRectangle.Width, a.AnimationTable.SpriteSourceRectangle.Height);
-         
-            
+
             foreach (GameObject b in objects)
             {
                 if (!b.Equals(a) && b.Solid)
@@ -67,7 +58,6 @@ namespace Rain
             }
      
                 return hit;
-            
         }
 
         public GameObject testCollisionWithBarrier(GameObject a,  Type type)
@@ -94,13 +84,8 @@ namespace Rain
             return null;
             }
 
-
-
-
         public GameObject testTop(GameObject a, Vector2 offest, ref Vector2 depth)
         {
-            
-     
             Rectangle aRectangle = new Rectangle((int)a.Position.X, (int)(a.Position.Y + offest.Y), (int)(a.AnimationTable.SpriteSourceRectangle.Width * a.Scale), (int)offest.Y);
             // Boolean collision = false;
             
@@ -145,8 +130,6 @@ namespace Rain
 
          public  GameObject testBottom(GameObject a, Vector2 offset, ref Vector2 depth)
         {
-
-
             Rectangle aRectangle = new Rectangle((int)a.Position.X, (int)(a.Position.Y + a.AnimationTable.SpriteSourceRectangle.Height * a.Scale + offset.Y), (int)(a.AnimationTable.SpriteSourceRectangle.Width * a.Scale), (int)offset.Y + 2);
             // Boolean collision = false;
            // System.Console.WriteLine(aRectangle);
@@ -195,8 +178,6 @@ namespace Rain
 
         public GameObject testLeft(GameObject a, Vector2 offset)
         {
-
-
             Rectangle aRectangle = new Rectangle((int)(a.Position.X + offset.X), (int)a.Position.Y, (int)offset.X, (int)(a.AnimationTable.SpriteSourceRectangle.Height * a.Scale));
             // Boolean collision = false;
 
@@ -238,8 +219,6 @@ namespace Rain
 
         public GameObject testRight(GameObject a, Vector2 offset)
         {
-           
-
             Rectangle aRectangle = new Rectangle((int)(a.Position.X + (a.AnimationTable.SpriteSourceRectangle.Width * a.Scale)), (int)a.Position.Y , (int)(offset.X), (int)(a.AnimationTable.SpriteSourceRectangle.Height * a.Scale) -3);
             // Boolean collision = false;
 

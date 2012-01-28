@@ -20,39 +20,32 @@ namespace Rain
         Controller controller;
         CollisionManager collisonManager;
         Vector2 velocity;
-        
+        Vector2 gravity;
+        Vector2 acceleration;
+
         public Player(Vector2 initPos, AnimationTable initAnimationTable, Controller pController, ref CollisionManager pCollisionManager)
             : base(initPos, initAnimationTable, ref pCollisionManager)
         {
             position = initPos;
             controller = pController;
+            gravity = new Vector2(0, 9.8f);
         }
 
         public override void update(GameTime gametime)
         {
-            if (controller.keyHeld(Keys.Up))
-            {
-                rotation = MathHelper.ToRadians(270);
-                velocity.Y -=2f;
-            }
-            if (controller.keyHeld(Keys.Down))
-            {
-                rotation = MathHelper.ToRadians(90);
-                velocity.Y += 2f;
-            }
             if (controller.keyHeld(Keys.Left))
             {
-                rotation = MathHelper.ToRadians(180);
+                flipHorizontally = SpriteEffects.FlipHorizontally;
                 velocity.X -= 2f;
             }
             if (controller.keyHeld(Keys.Right))
             {
-                rotation = MathHelper.ToRadians(0);
                 velocity.X += 2f;
+                flipHorizontally = SpriteEffects.None;
             }
 
+            velocity += gravity;
             position += velocity;
-            rotation = (float)Math.Atan2(velocity.Y, velocity.X);
             velocity = Vector2.Zero;
         }
     }

@@ -136,7 +136,7 @@ namespace Rain
                     foreach (GameObject drawable in layer.Objects)
                         if (drawable.Visible)
                             spriteBatch.Draw(drawable.AnimationTable.SpriteSheet.Texture, camera.getRenderPosition(drawable.Position, layer.ScrollRateX, layer.ScrollRateY),
-                               drawable.AnimationTable.SpriteSourceRectangle, drawable.Color, drawable.Rotation, new Vector2(drawable.AnimationTable.SpriteSourceRectangle.Width / 2, drawable.AnimationTable.SpriteSourceRectangle.Height / 2), drawable.Scale, SpriteEffects.None, drawable.ZOrder +layer.ZOrder);
+                               drawable.AnimationTable.SpriteSourceRectangle, drawable.Color, drawable.Rotation, new Vector2(drawable.AnimationTable.SpriteSourceRectangle.Width / 2, drawable.AnimationTable.SpriteSourceRectangle.Height / 2), drawable.Scale, drawable.FlipHorizontally, drawable.ZOrder + layer.ZOrder);
 
             foreach (Line line in lines)
                 LineBatch.DrawLine(spriteBatch, camera, new Color(randomNum.Next(100, 255), randomNum.Next(255), randomNum.Next(255)), line);

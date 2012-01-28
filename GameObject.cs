@@ -18,9 +18,7 @@ namespace Rain
         protected Boolean remove;
         protected Boolean visible;
         protected Boolean tested;
-    
-       
-       
+        protected SpriteEffects flipHorizontally;
         private Boolean solid = false;
         
         AnimationTable animationTable;
@@ -39,9 +37,9 @@ namespace Rain
             color = new Color(255, 255, 255, 255);
             visible = true;
             remove = false;
+            flipHorizontally = SpriteEffects.None;
             solid = false;
             collisionManager.addCollisionObject(this);
-         
         }
 
 
@@ -50,8 +48,6 @@ namespace Rain
         {
             animationTable.setAnimation(animation);
         }
-
-     
 
         public Boolean setSolid()
         {
@@ -87,6 +83,11 @@ namespace Rain
         {
             get { return animationTable; }
 
+        }
+
+        public SpriteEffects FlipHorizontally
+        {
+            get { return flipHorizontally; }
         }
 
         public Boolean Remove

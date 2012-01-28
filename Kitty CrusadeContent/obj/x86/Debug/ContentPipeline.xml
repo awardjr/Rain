@@ -11,39 +11,39 @@
       <Time>2011-12-17T13:05:26-05:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\sprites\kitty_0.xml</Key>
-        <Value>2012-01-28T12:17:28.943901-05:00</Value>
+        <Value>2012-01-28T12:59:43.6170083-05:00</Value>
       </Dependency>
       <Dependency>
         <Key>obj\x86\Debug\sprites\floortile_0.xml</Key>
-        <Value>2012-01-28T12:17:28.9831015-05:00</Value>
+        <Value>2012-01-28T12:59:43.6740116-05:00</Value>
       </Dependency>
       <Dependency>
         <Key>obj\x86\Debug\sprites\star1_0.xml</Key>
-        <Value>2012-01-28T12:17:29.0299016-05:00</Value>
+        <Value>2012-01-28T12:59:43.7180141-05:00</Value>
       </Dependency>
       <Dependency>
         <Key>obj\x86\Debug\sprites\star2_0.xml</Key>
-        <Value>2012-01-28T12:17:29.0767017-05:00</Value>
+        <Value>2012-01-28T12:59:43.7590164-05:00</Value>
       </Dependency>
       <Dependency>
         <Key>obj\x86\Debug\sprites\bullet1_0.xml</Key>
-        <Value>2012-01-28T12:17:29.1079017-05:00</Value>
+        <Value>2012-01-28T12:59:43.8000188-05:00</Value>
       </Dependency>
       <Dependency>
         <Key>obj\x86\Debug\sprites\bullet2_0.xml</Key>
-        <Value>2012-01-28T12:17:29.1547018-05:00</Value>
+        <Value>2012-01-28T12:59:43.8470215-05:00</Value>
       </Dependency>
       <Dependency>
         <Key>obj\x86\Debug\sprites\bullet3_0.xml</Key>
-        <Value>2012-01-28T12:17:29.2015019-05:00</Value>
+        <Value>2012-01-28T12:59:43.8900239-05:00</Value>
       </Dependency>
       <Dependency>
         <Key>obj\x86\Debug\sprites\grass_0.xml</Key>
-        <Value>2012-01-28T12:17:29.3419022-05:00</Value>
+        <Value>2012-01-28T12:59:44.0320321-05:00</Value>
       </Dependency>
       <Dependency>
         <Key>obj\x86\Debug\sprites\cloud_0.xml</Key>
-        <Value>2012-01-28T12:17:29.3887022-05:00</Value>
+        <Value>2012-01-28T12:59:44.0750345-05:00</Value>
       </Dependency>
     </Item>
     <Item>
