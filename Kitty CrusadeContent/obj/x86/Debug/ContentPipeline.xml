@@ -8,7 +8,7 @@
       <Processor>SpriteSheetProcessor</Processor>
       <Options>None</Options>
       <Output>D:\Code\Rain\bin\x86\Debug\Content\sheet.xnb</Output>
-      <Time>2012-01-28T15:21:21.1361507-05:00</Time>
+      <Time>2012-01-28T16:52:50.783074-05:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\sprites\kitty_0.xml</Key>
         <Value>2012-01-28T14:55:53.605781-05:00</Value>
@@ -19,15 +19,19 @@
       </Dependency>
       <Dependency>
         <Key>obj\x86\Debug\sprites\drop_moving\drop_move_1_0.xml</Key>
-        <Value>2012-01-28T15:21:06.716326-05:00</Value>
+        <Value>2012-01-28T18:11:47.7597392-05:00</Value>
       </Dependency>
       <Dependency>
         <Key>obj\x86\Debug\sprites\drop_moving\drop_move_2_0.xml</Key>
-        <Value>2012-01-28T15:21:25.4683985-05:00</Value>
+        <Value>2012-01-28T18:11:47.8377394-05:00</Value>
       </Dependency>
       <Dependency>
         <Key>obj\x86\Debug\sprites\drop_moving\drop_move_3_0.xml</Key>
-        <Value>2012-01-28T15:21:27.0984918-05:00</Value>
+        <Value>2012-01-28T18:11:47.9001395-05:00</Value>
+      </Dependency>
+      <Dependency>
+        <Key>obj\x86\Debug\sprites\droplets\droplet_1_0.xml</Key>
+        <Value>2012-01-28T17:02:19.7636178-05:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -133,7 +137,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>IntermediateFile</Options>
       <Output>obj\x86\Debug\sprites\drop_moving\drop_move_1_0.xml</Output>
-      <Time>2012-01-28T12:59:02-05:00</Time>
+      <Time>2012-01-28T18:11:20.7298661-05:00</Time>
     </Item>
     <Item>
       <Source>sprites\drop_moving\drop_move_2.png</Source>
@@ -141,7 +145,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>IntermediateFile</Options>
       <Output>obj\x86\Debug\sprites\drop_moving\drop_move_2_0.xml</Output>
-      <Time>2012-01-28T12:59:03-05:00</Time>
+      <Time>2012-01-28T18:11:32.4610867-05:00</Time>
     </Item>
     <Item>
       <Source>sprites\drop_moving\drop_move_3.png</Source>
@@ -149,7 +153,15 @@
       <Processor>TextureProcessor</Processor>
       <Options>IntermediateFile</Options>
       <Output>obj\x86\Debug\sprites\drop_moving\drop_move_3_0.xml</Output>
-      <Time>2012-01-28T15:11:01-05:00</Time>
+      <Time>2012-01-28T18:11:42.3671041-05:00</Time>
+    </Item>
+    <Item>
+      <Source>sprites\droplets\droplet_1.png</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>IntermediateFile</Options>
+      <Output>obj\x86\Debug\sprites\droplets\droplet_1_0.xml</Output>
+      <Time>2012-01-28T16:52:36.6712669-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

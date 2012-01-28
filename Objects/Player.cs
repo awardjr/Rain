@@ -17,20 +17,30 @@ namespace Rain.Objects
 {
     class Player : GameObject
     {
+        enum PlayerState { Stand, Walking, Jumping };
         Controller controller;
         Vector2 velocity;
-    //    Vector2 gravity;
-
+        PlayerState state;
+        int drops;
+        
         public Player(Vector2 initPos, AnimationTable initAnimationTable, Controller pController)
             : base(initPos, initAnimationTable, ObjectType.Player)
         {
             position = initPos;
             controller = pController;
-         //   gravity = new Vector2(0, 9.8f);
+            scale = 0.2f;
+            drops = 0;
+        }
+
+        public void addDrop()
+        {
+            drops+=1;
         }
 
         public override void update(GameTime gametime)
         {
+            scale = (drops * 0.01f) + 0.2f;
+            
             if (controller.keyHeld(Keys.Left))
             {
                 flipHorizontally = SpriteEffects.FlipHorizontally;
@@ -41,8 +51,16 @@ namespace Rain.Objects
                 velocity.X += 2f;
                 flipHorizontally = SpriteEffects.None;
             }
+            if (velocity.Length() > 0)
+                state = PlayerState.Walking;
+            if (velocity.Length() == 0)
+                state = PlayerState.Stand;
 
-         //   velocity += gravity;
+            if(state == PlayerState.Walking)
+                this.setAnimation("moving");
+            if(state == PlayerState.Stand)
+                this.setAnimation("stand");
+
             position += velocity;
             velocity = Vector2.Zero;
         }

@@ -112,6 +112,7 @@
     <Compile Include="Camera.cs" />
     <Compile Include="CollisionManager.cs" />
     <Compile Include="Controller.cs" />
+    <Compile Include="Objects\Droplet.cs" />
     <Compile Include="Objects\GameObject.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="Layer.cs" />
@@ -123,9 +124,9 @@
     <Compile Include="Game1.cs" />
     <Compile Include="RectangleExtensions.cs" />
     <Compile Include="AGameState.cs" />
-    <Compile Include="CGamePlayState.cs" />
-    <Compile Include="CMainMenuState.cs" />
-    <Compile Include="CStateMachine.cs" />
+    <Compile Include="States\CGamePlayState.cs" />
+    <Compile Include="States\CMainMenuState.cs" />
+    <Compile Include="States\CStateMachine.cs" />
     <Compile Include="Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -169,6 +170,9 @@
       <ProductName>Microsoft XNA Framework Redistributable 4.0</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />

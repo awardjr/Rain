@@ -65,7 +65,6 @@ namespace Rain
 
                 if (objects[i].Remove)
                 {
-                    objects[i].unsetSolid();
                     objects.Remove(objects[i]);
 
                 }
@@ -100,7 +99,7 @@ namespace Rain
         //Get/Set Zorder
         public int ZOrder
         {
-            get { return layerZOrder; }
+            get { return layerZOrder * objects.Count; }
             set { layerZOrder = value; }
         }
 
@@ -113,8 +112,4 @@ namespace Rain
         }
 
     }
-
-
-
-
 }
