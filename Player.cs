@@ -19,6 +19,7 @@ namespace Rain
     {
         Controller controller;
         Vector2 velocity;
+        Boolean Jumpin;
     //    Vector2 gravity;
 
         public Player(Vector2 initPos, AnimationTable initAnimationTable, Controller pController)
@@ -26,11 +27,13 @@ namespace Rain
         {
             position = initPos;
             controller = pController;
+            Jumpin = false;
          //   gravity = new Vector2(0, 9.8f);
         }
 
         public override void update(GameTime gametime)
         {
+            
             if (controller.keyHeld(Keys.Left))
             {
                 flipHorizontally = SpriteEffects.FlipHorizontally;
@@ -42,9 +45,30 @@ namespace Rain
                 flipHorizontally = SpriteEffects.None;
             }
 
+            if (controller.keyPressed(Keys.Space) && Jumpin == false)
+            {
+                Jumpin = true;
+                velocity.Y = -30;
+            }
+
          //   velocity += gravity;
             position += velocity;
-            velocity = Vector2.Zero;
+            velocity.X = 0;
+
+            if (velocity.Y < 0)
+            {
+                velocity.Y += 1;
+            }
+            else if (Jumpin == true && position.Y >= 500)
+            {
+                Jumpin = false;
+            }
+
+            if (position.Y < 500)
+            {
+                position.Y += 1;
+            }
+            
         }
     }
 }

@@ -31,6 +31,7 @@ namespace Rain
         SpriteSheet spritesheet;
         CollisionManager collisionManager;
         Player player;
+        SpriteFont font;
 
         // State Machine
         CStateMachine _StateMachine;
@@ -62,6 +63,7 @@ namespace Rain
 
             _StateMachine = new CStateMachine();
             _StateMachine.PushState(_MainMenu);
+
             
         }
 
@@ -83,6 +85,7 @@ namespace Rain
 
             spritesheet = Content.Load<SpriteSheet>("sheet");
             loadAnimationTables();
+            font = Content.Load<SpriteFont>("FromWhereYouAre");
            
             loadLayers();
 
@@ -157,6 +160,8 @@ namespace Rain
             }
             foreach (Line line in lines)
                 LineBatch.DrawLine(spriteBatch, camera, new Color(randomNum.Next(100, 255), randomNum.Next(255), randomNum.Next(255)), line);
+
+            spriteBatch.DrawString(font, "Hello World!", new Vector2(150, 150), Color.Yellow);
 
             // DrawText();
             spriteBatch.End();
