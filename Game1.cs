@@ -122,13 +122,21 @@ namespace Rain
             foreach (KeyValuePair<String, Layer> pair in layers) {
                 layers[pair.Key].update(gameTime);
                 foreach (GameObject drawable in layers[pair.Key].Objects)
+                {
                     if (drawable.Visible)
-                        spriteBatch.Draw(drawable.AnimationTable.SpriteSheet.Texture, camera.getRenderPosition(drawable.Position, layers[pair.Key].ScrollRateX, layers[pair.Key].ScrollRateY),
-                            drawable.AnimationTable.SpriteSourceRectangle, drawable.Color, drawable.Rotation, 
-                            new Vector2(drawable.AnimationTable.SpriteSourceRectangle.Width / 2, 
-                                drawable.AnimationTable.SpriteSourceRectangle.Height / 2), drawable.Scale, 
-                                drawable.FlipHorizontally, drawable.ZOrder + layers[pair.Key].ZOrder);
+                    {
+                        spriteBatch.Draw(drawable.AnimationTable.SpriteSheet.Texture,
+                            camera.getRenderPosition(drawable.Position, layers[pair.Key].ScrollRateX, layers[pair.Key].ScrollRateY),
+                            drawable.AnimationTable.SpriteSourceRectangle,
+                            drawable.Color,
+                            drawable.Rotation,
+                            new Vector2(drawable.AnimationTable.SpriteSourceRectangle.Width / 2, drawable.AnimationTable.SpriteSourceRectangle.Height / 2),
+                            drawable.Scale,
+                            drawable.FlipHorizontally,
+                            drawable.ZOrder + layers[pair.Key].ZOrder);
+                    }
                 }
+            }
             foreach (Line line in lines)
                 LineBatch.DrawLine(spriteBatch, camera, new Color(randomNum.Next(100, 255), randomNum.Next(255), randomNum.Next(255)), line);
 
