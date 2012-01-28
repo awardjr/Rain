@@ -123,10 +123,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="RectangleExtensions.cs" />
-    <Compile Include="States\AGameState.cs" />
-    <Compile Include="States\CGamePlayState.cs" />
-    <Compile Include="States\CMainMenuState.cs" />
-    <Compile Include="States\CStateMachine.cs" />
+    <Compile Include="AGameState.cs" />
+    <Compile Include="CGamePlayState.cs" />
+    <Compile Include="CMainMenuState.cs" />
+    <Compile Include="CStateMachine.cs" />
     <Compile Include="Utilities.cs" />
   </ItemGroup>
   <ItemGroup>

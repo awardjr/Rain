@@ -9,19 +9,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Rain.States
+namespace Rain
 {
-    class CStateMachine
+    public class CStateMachine
     {
         // List of State pointers that allows the stacking of states
         List<AGameState> m_vGameStates;
 
         public CStateMachine()
         {
+            m_vGameStates = new List<AGameState>();
         }
 
         // Updates current state and any other updateable stacked states
-        protected void UpdateState(float fDTime)
+        public void UpdateState(float fDTime)
         {
             AGameState _state;
             int nStateCount = this.m_vGameStates.Count;
@@ -30,12 +31,12 @@ namespace Rain.States
                 _state = this.m_vGameStates[nState];
                 if (nState == (nStateCount - 1) || _state.BUpdate == true)
                 {
-                    _state.Update(fDTime);
+                    _state.Update(fDTime, this);
                 }
             }
         }
         // Renders current state and any other renderable stacked states
-        protected void RenderState()
+        public void RenderState()
         {
             AGameState _state;
             int nStateCount = this.m_vGameStates.Count;
@@ -49,22 +50,22 @@ namespace Rain.States
             }
         }
         // Changes current states and clears state stack
-        protected void ChangeState(AGameState pState)
+        public void ChangeState(AGameState pState)
         {
             this.ClearStateStack();
             this.PushState(pState);
         }
         // Adds a state to the State Stack
-        protected void PushState(AGameState pState)
+        public void PushState(AGameState pState)
         {
-            if (pState != null)
+            if (pState.BInitialized)
             {
                 this.m_vGameStates.Add(pState);
                 pState.Enter();
             }
         }
         // Pops the top state from the state stack
-        protected void PopState()
+        public void PopState()
         {
             int nTop = this.m_vGameStates.Count;
             AGameState pState = this.m_vGameStates[nTop];
@@ -75,7 +76,7 @@ namespace Rain.States
             }
         }
         // Clears the entire state stack
-        protected void ClearStateStack()
+        public void ClearStateStack()
         {
             int nStateCount = this.m_vGameStates.Count;
             for (int nState = 0; nState < nStateCount; nState++)

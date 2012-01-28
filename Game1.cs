@@ -32,6 +32,12 @@ namespace Rain
         CollisionManager collisionManager;
         Player player;
 
+        // State Machine
+        CStateMachine _StateMachine;
+
+      
+
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -49,6 +55,14 @@ namespace Rain
             // TODO: Add your initialization logic here
 
             base.Initialize();
+
+            CMainMenuState _MainMenu = new CMainMenuState();
+            _MainMenu.Enter();
+            
+
+            _StateMachine = new CStateMachine();
+            _StateMachine.PushState(_MainMenu);
+            
         }
 
         /// <summary>
@@ -94,8 +108,9 @@ namespace Rain
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
-
+            
             // TODO: Add your update logic here
+            _StateMachine.UpdateState(gameTime.ElapsedGameTime.Ticks);
            
             
             controller.update();
@@ -116,6 +131,9 @@ namespace Rain
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
+
+            _StateMachine.RenderState();
+
 
             spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, null, null, null, null, camera.Transform);
 
@@ -155,8 +173,6 @@ namespace Rain
 
             layers.Add("main", new Layer(1f, 1f, 1));
             layers["main"].add(player);
-  
-           
         }
 
         protected void loadAnimationTables()

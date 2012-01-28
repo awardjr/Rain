@@ -3,18 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Rain.States
+namespace Rain
 {
-    public class CMainMenuState : AGameState
+    public class CGamePlayState : AGameState
     {
-        override public void Enter()
+         override public void Enter()
         {
         }
         override public void Input()
         {
         }
-        override public void Update(float fDTime) { }
+        override public void Update(float fDTime, CStateMachine _SM) 
+        {
+            
+        }
         override public void Render() { }
         override public void Exit() { }
     }
+    
 }
