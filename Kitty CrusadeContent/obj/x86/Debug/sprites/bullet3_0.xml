@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Graphics="Microsoft.Xna.Framework.Content.Pipeline.Graphics" xmlns:Framework="Microsoft.Xna.Framework">
+  <Asset Type="Graphics:Texture2DContent">
+    <Identity>
+      <SourceFilename>D:\Code\Rain\Kitty CrusadeContent\sprites\bullet3.png</SourceFilename>
+      <SourceTool>TextureImporter</SourceTool>
+    </Identity>
+    <Mipmaps>
+      <Mipmap Type="Graphics:PixelBitmapContent[Framework:Color]">
+        <Width>3</Width>
+        <Height>3</Height>
+        <Pixels>
+          <Row>80808080 FFFF6A00 80808080</Row>
+          <Row>FFFF6A00 FFFFFFFF FFFF6A00</Row>
+          <Row>80808080 FFFF6A00 80808080</Row>
+        </Pixels>
+      </Mipmap>
+    </Mipmaps>
+  </Asset>
+</XnaContent>
