@@ -19,15 +19,13 @@ namespace Rain
 
     class Bullet : GameObject
     {
-      
-        CollisionManager collisonManager;
         float angle;
         float speed;
         float deceleration;
         Vector2 velocity;
 
-        public Bullet(Vector2 initPos, AnimationTable initAnimationTable, ref CollisionManager pCollisionManager, float pSpeed = 10f, float pAngle = 0f, float pDeceleration = 0f)
-            : base(initPos, initAnimationTable, ref pCollisionManager)
+        public Bullet(Vector2 initPos, AnimationTable initAnimationTable, float pSpeed = 10f, float pAngle = 0f, float pDeceleration = 0f)
+            : base(initPos, initAnimationTable)
         {
             position = initPos;
             speed = pSpeed;

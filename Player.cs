@@ -18,17 +18,15 @@ namespace Rain
     class Player : GameObject
     {
         Controller controller;
-        CollisionManager collisonManager;
         Vector2 velocity;
-        Vector2 gravity;
-        Vector2 acceleration;
+    //    Vector2 gravity;
 
-        public Player(Vector2 initPos, AnimationTable initAnimationTable, Controller pController, ref CollisionManager pCollisionManager)
-            : base(initPos, initAnimationTable, ref pCollisionManager)
+        public Player(Vector2 initPos, AnimationTable initAnimationTable, Controller pController)
+            : base(initPos, initAnimationTable, ObjectType.Player)
         {
             position = initPos;
             controller = pController;
-            gravity = new Vector2(0, 9.8f);
+         //   gravity = new Vector2(0, 9.8f);
         }
 
         public override void update(GameTime gametime)
@@ -44,7 +42,7 @@ namespace Rain
                 flipHorizontally = SpriteEffects.None;
             }
 
-            velocity += gravity;
+         //   velocity += gravity;
             position += velocity;
             velocity = Vector2.Zero;
         }

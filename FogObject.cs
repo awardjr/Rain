@@ -18,8 +18,8 @@ namespace Rain
     class FogObject : GameObject
     {
        
-        public FogObject(Vector2 initPos, AnimationTable initAnimationTable, ref CollisionManager pCollisionManager)
-            : base(initPos, initAnimationTable, ref pCollisionManager)
+        public FogObject(Vector2 initPos, AnimationTable initAnimationTable)
+            : base(initPos, initAnimationTable)
         {
             position = initPos;
            

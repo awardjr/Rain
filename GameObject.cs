@@ -8,27 +8,26 @@ namespace Rain
 {
     class GameObject
     {
+        public enum ObjectType{ Generic, Player, Building, Drops, Clouds };
+
         protected Vector2 position;
         protected float rotation;
         protected int zOrder;
         protected Color color;
         protected float alpha;
-        protected CollisionManager collisionManager;
         protected float scale;
         protected Boolean remove;
         protected Boolean visible;
         protected Boolean tested;
         protected SpriteEffects flipHorizontally;
         private Boolean solid = false;
-        
+        private ObjectType type; 
+       
         AnimationTable animationTable;
 
         //------------------------------------------------------------------
-        public GameObject(Vector2 initPos, AnimationTable initAnimationTable,ref CollisionManager pCollisionManager)
+        public GameObject(Vector2 initPos, AnimationTable initAnimationTable, ObjectType pType = ObjectType.Generic)
         {
-          
-           // pCollisionManager.addCollisionObject(this);
-            collisionManager = pCollisionManager;
             position = initPos;
             animationTable = initAnimationTable;
             zOrder = 0;
@@ -39,10 +38,8 @@ namespace Rain
             remove = false;
             flipHorizontally = SpriteEffects.None;
             solid = false;
-            collisionManager.addCollisionObject(this);
+            type = pType;
         }
-
-
 
         public void setAnimation(string animation)
         {
@@ -53,25 +50,22 @@ namespace Rain
         {
             if (solid == false)
             {
-               // collisionManager.addCollisionObject(this);
                 solid = true;
                 return true;
             }
             return false;
         }
 
-
         public Boolean unsetSolid()
         {
             if (solid == true)
             {
-               // collisionManager.removeCollisionObject( this);
+
                 solid = false;
                 return true;
             }
             return false;
         }
-
 
         public virtual void update(GameTime gametime)
         {
@@ -102,6 +96,11 @@ namespace Rain
             set { zOrder = value; }
         }
 
+        public ObjectType Type
+        {
+            get { return type; }
+            set { type = value; }
+        }
 
         public Boolean Solid
         {

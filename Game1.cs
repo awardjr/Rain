@@ -22,7 +22,7 @@ namespace Rain
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        List<Layer> layers;
+        SortedList<String, Layer> layers;
         Camera camera;
         Controller controller;
         List<Line> lines;
@@ -31,9 +31,6 @@ namespace Rain
         SpriteSheet spritesheet;
         CollisionManager collisionManager;
         Player player;
-
-        Layer main;
-        Layer fog;
 
         public Game1()
         {
@@ -61,7 +58,7 @@ namespace Rain
         protected override void LoadContent()
         {
             LineBatch.Init(GraphicsDevice);
-            layers = new List<Layer>();
+            layers = new SortedList<String, Layer>();
             camera = new Camera(Vector2.Zero);
             lines = new List<Line>();
             randomNum = new Random();
@@ -74,10 +71,6 @@ namespace Rain
             loadAnimationTables();
            
             loadLayers();
-            
-            
-
-
 
             // TODO: use this.Content to load your game content here
         }
@@ -110,34 +103,32 @@ namespace Rain
             handleControls(gameTime);
             player.update(gameTime);
 
-            foreach(Layer layer in layers)
+            foreach (KeyValuePair<String, Layer> layer in layers)
             {
-                layer.update(gameTime);
+                layers[layer.Key].update(gameTime);
             }
-
-            updateFog(gameTime);
 
             updateCamera(gameTime);
 
             base.Update(gameTime);
         }
 
-
-
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
 
-
             spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, null, null, null, null, camera.Transform);
 
-            foreach (Layer layer in layers)
-                if (layer.Visible)
-                    foreach (GameObject drawable in layer.Objects)
-                        if (drawable.Visible)
-                            spriteBatch.Draw(drawable.AnimationTable.SpriteSheet.Texture, camera.getRenderPosition(drawable.Position, layer.ScrollRateX, layer.ScrollRateY),
-                               drawable.AnimationTable.SpriteSourceRectangle, drawable.Color, drawable.Rotation, new Vector2(drawable.AnimationTable.SpriteSourceRectangle.Width / 2, drawable.AnimationTable.SpriteSourceRectangle.Height / 2), drawable.Scale, drawable.FlipHorizontally, drawable.ZOrder + layer.ZOrder);
-
+            foreach (KeyValuePair<String, Layer> pair in layers) {
+                layers[pair.Key].update(gameTime);
+                foreach (GameObject drawable in layers[pair.Key].Objects)
+                    if (drawable.Visible)
+                        spriteBatch.Draw(drawable.AnimationTable.SpriteSheet.Texture, camera.getRenderPosition(drawable.Position, layers[pair.Key].ScrollRateX, layers[pair.Key].ScrollRateY),
+                            drawable.AnimationTable.SpriteSourceRectangle, drawable.Color, drawable.Rotation, 
+                            new Vector2(drawable.AnimationTable.SpriteSourceRectangle.Width / 2, 
+                                drawable.AnimationTable.SpriteSourceRectangle.Height / 2), drawable.Scale, 
+                                drawable.FlipHorizontally, drawable.ZOrder + layers[pair.Key].ZOrder);
+                }
             foreach (Line line in lines)
                 LineBatch.DrawLine(spriteBatch, camera, new Color(randomNum.Next(100, 255), randomNum.Next(255), randomNum.Next(255)), line);
 
@@ -151,46 +142,12 @@ namespace Rain
         protected void loadLayers()
         {
 
-            player = new Player(new Vector2(100, 100), animationTables["player"], controller, ref collisionManager);
+            player = new Player(new Vector2(100, 100), animationTables["player"], controller);
             player.setAnimation("stand");
 
-
-            main = new Layer(1f, 1f, 1);
-            main.add(player);
-
-           
-            Layer star1 = new Layer(0.8f, 0.8f, 2);
-            for (int i = 0; i < 20; i++)
-                for (int j = 0; j < 20; j++)
-                    star1.add(new GameObject(new Vector2(randomNum.Next(2000), randomNum.Next(2000)), animationTables["stars"], ref collisionManager));
-
-            Layer star2 = new Layer(0.6f, 0.6f, 3);
-            for (int i = 0; i < 20; i++)
-                for (int j = 0; j < 20; j++)
-                    star2.add(new GameObject(new Vector2(randomNum.Next(3000), randomNum.Next(3000)), animationTables["stars"], ref collisionManager));
-
-            Layer star3 = new Layer(0.4f, 0.4f, 4);
-            for (int i = 0; i < 20; i++)
-                for (int j = 0; j < 20; j++)
-                    star3.add(new GameObject(new Vector2(randomNum.Next(3000), randomNum.Next(3000)), animationTables["stars"], ref collisionManager));
-
-            Layer grass = new Layer(1f, 1f, 5);
-            for(int i = 0; i<20; i++)
-                for(int j=0; j<20; j++)
-                    grass.add(new GameObject(new Vector2(i*256, j*256), animationTables["ground"], ref collisionManager));
-
-            fog = new Layer(1f, 1f, 0);
-            for (int i = 0; i < 50; i++)
-                for (int j = 0; j < 50; j++)
-                    fog.add(new FogObject(new Vector2(i * 16, j * 16), animationTables["clouds"], ref collisionManager));
-
-            layers.Add(grass);
-            layers.Add(star3);
-            layers.Add(star2);
-            layers.Add(star1);
-            
-            layers.Add(main);
-            layers.Add(fog);
+            layers.Add("main", new Layer(1f, 1f, 1));
+            layers["main"].add(player);
+  
            
         }
 
@@ -228,22 +185,9 @@ namespace Rain
         {
                if(controller.keyPressed(Keys.LeftShift) || controller.keyPressed(Keys.RightShift))
                {
-                   Bullet bullet = new Bullet(player.Position, animationTables["bullets"], ref collisionManager, 10f, player.Rotation);
-                   main.add(bullet);
+                   Bullet bullet = new Bullet(player.Position, animationTables["bullets"], 10f, player.Rotation);
+                   layers["main"].add(bullet);
                }
-        }
-
-        protected void updateFog(GameTime gametime)
-        {
-            foreach(FogObject fogTile in fog.Objects)
-            {
-                fogTile.Visible = true;
-                if (Math.Abs(player.Position.X - fogTile.Position.X) < 100 && Math.Abs(player.Position.Y - fogTile.Position.Y) < 100)
-                {
-                    fogTile.Visible = false;
-                }
-                    
-            }
         }
     }
 }

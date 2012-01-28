@@ -28,7 +28,6 @@ namespace Rain
             position += moveVector;
         }
 
-   
 
         public void zoom(float speed, MouseState mState)
         {
