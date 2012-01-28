@@ -34,7 +34,7 @@ namespace Rain.Objects
 
         public void addDrop()
         {
-            drops+=1;
+            drops+=2;
         }
 
         public override void update(GameTime gametime)
