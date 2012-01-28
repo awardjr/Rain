@@ -1,9 +1,7 @@
-<<<<<<< HEAD
+
 *.suo
-=======
 *.exe
 *.pdb
->>>>>>> 741b4849d8ba68684f788613bf6555d6098fa88c
 #ignore thumbnails created by windows
 Thumbs.db
 #Ignore files build by Visual Studio
@@ -36,3 +34,5 @@ _ReSharper*/
 =======
 [Tt]est[Rr]esult*
 >>>>>>> 741b4849d8ba68684f788613bf6555d6098fa88c
+
+obj/x86/Debug/Kitty Crusade.pdb
