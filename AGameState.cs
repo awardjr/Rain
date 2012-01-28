@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Rain.States
+namespace Rain
 {
     // Abstract version of a game state
     abstract public class AGameState
@@ -45,7 +45,7 @@ namespace Rain.States
 
         abstract public void Enter();
         abstract public void Input();
-        abstract public void Update(float fDTime);
+        abstract public void Update(float fDTime, CStateMachine _SM);
         abstract public void Render();
         abstract public void Exit();
     }
