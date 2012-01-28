@@ -2,7 +2,7 @@
 <XnaContent xmlns:Graphics="Microsoft.Xna.Framework.Content.Pipeline.Graphics" xmlns:Framework="Microsoft.Xna.Framework">
   <Asset Type="Graphics:Texture2DContent">
     <Identity>
-      <SourceFilename>D:\Code\Rain\Kitty CrusadeContent\sprites\star1.png</SourceFilename>
+      <SourceFilename>C:\Users\Peace\Desktop\Rain\Rain\Kitty CrusadeContent\sprites\star1.png</SourceFilename>
       <SourceTool>TextureImporter</SourceTool>
     </Identity>
     <Mipmaps>
