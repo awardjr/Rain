@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Storage;
 using System.Collections;
 
 
-namespace Rain
+namespace Rain.Objects
 {
     class CollisionManager
     {

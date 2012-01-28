@@ -7,43 +7,27 @@
       <Importer>XmlImporter</Importer>
       <Processor>SpriteSheetProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Peace\Desktop\Rain\Rain\bin\x86\Debug\Content\sheet.xnb</Output>
-      <Time>2012-01-28T13:14:08.443042-05:00</Time>
+      <Output>D:\Code\Rain\bin\x86\Debug\Content\sheet.xnb</Output>
+      <Time>2012-01-28T15:21:21.1361507-05:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\sprites\kitty_0.xml</Key>
-        <Value>2012-01-28T13:15:49.6778323-05:00</Value>
-      </Dependency>
-      <Dependency>
-        <Key>obj\x86\Debug\sprites\floortile_0.xml</Key>
-        <Value>2012-01-28T13:15:49.742836-05:00</Value>
-      </Dependency>
-      <Dependency>
-        <Key>obj\x86\Debug\sprites\star1_0.xml</Key>
-        <Value>2012-01-28T13:15:49.8048395-05:00</Value>
-      </Dependency>
-      <Dependency>
-        <Key>obj\x86\Debug\sprites\star2_0.xml</Key>
-        <Value>2012-01-28T13:15:49.865843-05:00</Value>
-      </Dependency>
-      <Dependency>
-        <Key>obj\x86\Debug\sprites\bullet1_0.xml</Key>
-        <Value>2012-01-28T13:15:49.9258464-05:00</Value>
-      </Dependency>
-      <Dependency>
-        <Key>obj\x86\Debug\sprites\bullet2_0.xml</Key>
-        <Value>2012-01-28T13:15:49.9898501-05:00</Value>
-      </Dependency>
-      <Dependency>
-        <Key>obj\x86\Debug\sprites\bullet3_0.xml</Key>
-        <Value>2012-01-28T13:15:50.0528537-05:00</Value>
+        <Value>2012-01-28T14:55:53.605781-05:00</Value>
       </Dependency>
       <Dependency>
         <Key>obj\x86\Debug\sprites\grass_0.xml</Key>
-        <Value>2012-01-28T13:15:50.2188632-05:00</Value>
+        <Value>2012-01-28T14:55:54.0188046-05:00</Value>
       </Dependency>
       <Dependency>
-        <Key>obj\x86\Debug\sprites\cloud_0.xml</Key>
-        <Value>2012-01-28T13:15:50.2808667-05:00</Value>
+        <Key>obj\x86\Debug\sprites\drop_moving\drop_move_1_0.xml</Key>
+        <Value>2012-01-28T15:21:06.716326-05:00</Value>
+      </Dependency>
+      <Dependency>
+        <Key>obj\x86\Debug\sprites\drop_moving\drop_move_2_0.xml</Key>
+        <Value>2012-01-28T15:21:25.4683985-05:00</Value>
+      </Dependency>
+      <Dependency>
+        <Key>obj\x86\Debug\sprites\drop_moving\drop_move_3_0.xml</Key>
+        <Value>2012-01-28T15:21:27.0984918-05:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -52,8 +36,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Peace\Desktop\Rain\Rain\bin\x86\Debug\Content\sprites\star1.xnb</Output>
-      <Time>2012-01-28T13:14:08.4570428-05:00</Time>
+      <Output>D:\Code\Rain\bin\x86\Debug\Content\sprites\star1.xnb</Output>
+      <Time>2011-12-17T13:05:26-05:00</Time>
     </Item>
     <Item>
       <Source>sprites\star2.png</Source>
@@ -61,8 +45,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Peace\Desktop\Rain\Rain\bin\x86\Debug\Content\sprites\star2.xnb</Output>
-      <Time>2012-01-28T13:14:08.4580428-05:00</Time>
+      <Output>D:\Code\Rain\bin\x86\Debug\Content\sprites\star2.xnb</Output>
+      <Time>2011-12-17T13:05:26-05:00</Time>
     </Item>
     <Item>
       <Source>sprites\kitty.png</Source>
@@ -70,8 +54,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Peace\Desktop\Rain\Rain\bin\x86\Debug\Content\sprites\kitty.xnb</Output>
-      <Time>2012-01-28T13:14:08.4550426-05:00</Time>
+      <Output>D:\Code\Rain\bin\x86\Debug\Content\sprites\kitty.xnb</Output>
+      <Time>2011-12-17T13:05:26-05:00</Time>
     </Item>
     <Item>
       <Source>sprites\floortile.png</Source>
@@ -79,8 +63,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Peace\Desktop\Rain\Rain\bin\x86\Debug\Content\sprites\floortile.xnb</Output>
-      <Time>2012-01-28T13:14:08.4510424-05:00</Time>
+      <Output>D:\Code\Rain\bin\x86\Debug\Content\sprites\floortile.xnb</Output>
+      <Time>2011-12-17T13:05:26-05:00</Time>
     </Item>
     <Item>
       <Source>sprites\bullet1.png</Source>
@@ -88,8 +72,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Peace\Desktop\Rain\Rain\bin\x86\Debug\Content\sprites\bullet1.xnb</Output>
-      <Time>2012-01-28T13:14:08.4450421-05:00</Time>
+      <Output>D:\Code\Rain\bin\x86\Debug\Content\sprites\bullet1.xnb</Output>
+      <Time>2011-12-17T13:05:26-05:00</Time>
     </Item>
     <Item>
       <Source>sprites\bullet2.png</Source>
@@ -97,8 +81,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Peace\Desktop\Rain\Rain\bin\x86\Debug\Content\sprites\bullet2.xnb</Output>
-      <Time>2012-01-28T13:14:08.4470422-05:00</Time>
+      <Output>D:\Code\Rain\bin\x86\Debug\Content\sprites\bullet2.xnb</Output>
+      <Time>2011-12-17T13:05:26-05:00</Time>
     </Item>
     <Item>
       <Source>sprites\bullet3.png</Source>
@@ -106,8 +90,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Peace\Desktop\Rain\Rain\bin\x86\Debug\Content\sprites\bullet3.xnb</Output>
-      <Time>2012-01-28T13:14:08.4480422-05:00</Time>
+      <Output>D:\Code\Rain\bin\x86\Debug\Content\sprites\bullet3.xnb</Output>
+      <Time>2011-12-17T13:05:26-05:00</Time>
     </Item>
     <Item>
       <Source>sprites\grass.png</Source>
@@ -115,8 +99,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Peace\Desktop\Rain\Rain\bin\x86\Debug\Content\sprites\grass.xnb</Output>
-      <Time>2012-01-28T13:14:08.4540426-05:00</Time>
+      <Output>D:\Code\Rain\bin\x86\Debug\Content\sprites\grass.xnb</Output>
+      <Time>2011-12-17T13:05:26-05:00</Time>
     </Item>
     <Item>
       <Source>sprites\cloud.png</Source>
@@ -124,8 +108,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Peace\Desktop\Rain\Rain\bin\x86\Debug\Content\sprites\cloud.xnb</Output>
-      <Time>2012-01-28T13:14:08.4500424-05:00</Time>
+      <Output>D:\Code\Rain\bin\x86\Debug\Content\sprites\cloud.xnb</Output>
+      <Time>2011-12-17T13:05:26-05:00</Time>
     </Item>
     <Item>
       <Source>sprites\kitty.png</Source>
@@ -133,55 +117,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>IntermediateFile</Options>
       <Output>obj\x86\Debug\sprites\kitty_0.xml</Output>
-      <Time>2012-01-28T13:14:08.4550426-05:00</Time>
-    </Item>
-    <Item>
-      <Source>sprites\floortile.png</Source>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>IntermediateFile</Options>
-      <Output>obj\x86\Debug\sprites\floortile_0.xml</Output>
-      <Time>2012-01-28T13:14:08.4510424-05:00</Time>
-    </Item>
-    <Item>
-      <Source>sprites\star1.png</Source>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>IntermediateFile</Options>
-      <Output>obj\x86\Debug\sprites\star1_0.xml</Output>
-      <Time>2012-01-28T13:14:08.4570428-05:00</Time>
-    </Item>
-    <Item>
-      <Source>sprites\star2.png</Source>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>IntermediateFile</Options>
-      <Output>obj\x86\Debug\sprites\star2_0.xml</Output>
-      <Time>2012-01-28T13:14:08.4580428-05:00</Time>
-    </Item>
-    <Item>
-      <Source>sprites\bullet1.png</Source>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>IntermediateFile</Options>
-      <Output>obj\x86\Debug\sprites\bullet1_0.xml</Output>
-      <Time>2012-01-28T13:14:08.4450421-05:00</Time>
-    </Item>
-    <Item>
-      <Source>sprites\bullet2.png</Source>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>IntermediateFile</Options>
-      <Output>obj\x86\Debug\sprites\bullet2_0.xml</Output>
-      <Time>2012-01-28T13:14:08.4470422-05:00</Time>
-    </Item>
-    <Item>
-      <Source>sprites\bullet3.png</Source>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>IntermediateFile</Options>
-      <Output>obj\x86\Debug\sprites\bullet3_0.xml</Output>
-      <Time>2012-01-28T13:14:08.4480422-05:00</Time>
+      <Time>2011-12-17T13:05:26-05:00</Time>
     </Item>
     <Item>
       <Source>sprites\grass.png</Source>
@@ -189,15 +125,31 @@
       <Processor>TextureProcessor</Processor>
       <Options>IntermediateFile</Options>
       <Output>obj\x86\Debug\sprites\grass_0.xml</Output>
-      <Time>2012-01-28T13:14:08.4540426-05:00</Time>
+      <Time>2011-12-17T13:05:26-05:00</Time>
     </Item>
     <Item>
-      <Source>sprites\cloud.png</Source>
+      <Source>sprites\drop_moving\drop_move_1.png</Source>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>IntermediateFile</Options>
-      <Output>obj\x86\Debug\sprites\cloud_0.xml</Output>
-      <Time>2012-01-28T13:14:08.4500424-05:00</Time>
+      <Output>obj\x86\Debug\sprites\drop_moving\drop_move_1_0.xml</Output>
+      <Time>2012-01-28T12:59:02-05:00</Time>
+    </Item>
+    <Item>
+      <Source>sprites\drop_moving\drop_move_2.png</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>IntermediateFile</Options>
+      <Output>obj\x86\Debug\sprites\drop_moving\drop_move_2_0.xml</Output>
+      <Time>2012-01-28T12:59:03-05:00</Time>
+    </Item>
+    <Item>
+      <Source>sprites\drop_moving\drop_move_3.png</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>IntermediateFile</Options>
+      <Output>obj\x86\Debug\sprites\drop_moving\drop_move_3_0.xml</Output>
+      <Time>2012-01-28T15:11:01-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -205,43 +157,43 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Peace\Desktop\Rain\Rain\Kitty CrusadeContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Peace\Desktop\Rain\Rain\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Peace\Desktop\Rain\Rain\Kitty CrusadeContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Peace\Desktop\Rain\Rain\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>D:\Code\Rain\Kitty CrusadeContent\</RootDirectory>
+      <LoggerRootDirectory>D:\Code\Rain\</LoggerRootDirectory>
+      <IntermediateDirectory>D:\Code\Rain\Kitty CrusadeContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>D:\Code\Rain\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
-        <Key>C:\Users\Peace\Desktop\Rain\Rain\SpriteSheetPipeline\bin\x86\Debug\SpriteSheetPipeline.dll</Key>
-        <Value>2012-01-28T13:14:08.5420476-05:00</Value>
+        <Key>D:\Code\Rain\SpriteSheetPipeline\bin\x86\Debug\SpriteSheetPipeline.dll</Key>
+        <Value>2011-12-17T13:05:26-05:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
         <Value>2010-08-23T12:41:18-04:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
         <Value>2010-08-23T12:41:18-04:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
         <Value>2010-08-23T12:41:18-04:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
         <Value>2010-08-23T12:41:18-04:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
         <Value>2010-08-23T12:41:18-04:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
         <Value>2010-08-23T12:41:18-04:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2011-09-29T23:35:30.1553608-04:00</Value>
+        <Value>2010-10-22T05:25:11.436405-04:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

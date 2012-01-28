@@ -12,6 +12,7 @@ using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Net;
 using Microsoft.Xna.Framework.Storage;
 using SpriteSheetRuntime;
+using Rain.Objects;
 
 namespace Rain
 {
@@ -46,8 +47,6 @@ namespace Rain
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
             base.Initialize();
         }
 
@@ -136,7 +135,6 @@ namespace Rain
             // DrawText();
             spriteBatch.End();
 
-
             base.Draw(gameTime);
         }
 
@@ -153,7 +151,7 @@ namespace Rain
         {
             AnimationTable player = new AnimationTable(spritesheet);
             AnimationTable ground = new AnimationTable(spritesheet);
-
+            
             player.addAnimation("stand", new Animation(new string[] { "kitty" }, TimeSpan.FromMilliseconds(100)));
             ground.addAnimation("grass", new Animation(new string[] { "grass" }, TimeSpan.FromMilliseconds(50)));
 
