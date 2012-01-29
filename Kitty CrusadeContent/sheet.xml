@@ -2,13 +2,36 @@
 <Asset Type="System.String[]">
 	<Item>sprites/kitty.png</Item>
 	<Item>sprites/grass.png</Item>
+  
+  
 	<Item>sprites/drop_moving/drop_move_1.png</Item>
 	<Item>sprites/drop_moving/drop_move_2.png</Item>
 	<Item>sprites/drop_moving/drop_move_3.png</Item>
-	<Item>sprites/droplets/droplet_1.png</Item>
+
+  <Item>sprites/drop_moving/drop_fall_1.png</Item>
+  <Item>sprites/drop_moving/drop_fall_2.png</Item>
+
+  <Item>sprites/drop_moving/drop_splat_1.png</Item>
+  <Item>sprites/drop_moving/drop_splat_2.png</Item>
+  <Item>sprites/drop_moving/drop_splat_3.png</Item>
+  <Item>sprites/drop_moving/drop_splat_4.png</Item>
+  <Item>sprites/drop_moving/drop_splat_5.png</Item>
+  <Item>sprites/drop_moving/drop_splat_6.png</Item>
+
+  <Item>sprites/droplets/droplet_1.png</Item>
   <Item>sprites/droplets/acid.png</Item>
+  
 	<Item>sprites/backgrounds/cloud1.png</Item>
 	<Item>sprites/backgrounds/cloud2.png</Item>
 	<Item>sprites/backgrounds/cloud3.png</Item>
+
+  <Item>sprites/ground/flower.png</Item>
+  <Item>sprites/ground/cloud2.png</Item>
+  <Item>sprites/ground/cloud3.png</Item>
+
+  <Item>sprites/buildings/smokestack.png</Item>
+  <Item>sprites/buildings/grass.png</Item>
+  <Item>sprites/buildings/greenground.png</Item>
+  <Item>sprites/buildings/ground.png</Item>
 </Asset>
 </XnaContent>
