@@ -25,7 +25,7 @@ namespace Rain.Objects
         float decel;
         float maxSpeed;
         PlayerState state;
-        int drops;
+        float drops;
         
         public Player(Vector2 initPos, AnimationTable initAnimationTable, Controller pController)
             : base(initPos, initAnimationTable, ObjectType.Player)
@@ -36,13 +36,17 @@ namespace Rain.Objects
             drops = 0;
             accel = 0.04f;
             decel = 0.55f;
-            rotation = 1f;
             maxSpeed = 1;
         }
 
         public void addDrop()
         {
-            drops+=2;
+            drops+=5;
+        }
+
+        public void addAcid()
+        {
+            drops -= 10;
         }
 
         public override void update(GameTime gametime)
@@ -51,11 +55,13 @@ namespace Rain.Objects
 
             if (controller.keyHeld(Keys.Left))
             {
+                drops-=0.09f;
                 flipHorizontally = SpriteEffects.FlipHorizontally;
                 acceleration.X -= accel;
             }
             if (controller.keyHeld(Keys.Right))
             {
+                drops-=0.09f;
                 flipHorizontally = SpriteEffects.None;
                 acceleration.X += accel;
             }
@@ -80,8 +86,9 @@ namespace Rain.Objects
                 this.setAnimation("moving");
             if (state == PlayerState.Stand)
                 this.setAnimation("stand");
-
+            acceleration.Y += 0.0002f;
             position += acceleration;
+            drops = MathHelper.Clamp(drops, 0, 500);
             velocity.X = MathHelper.Clamp(velocity.X, -maxSpeed, maxSpeed);
             velocity.Y = MathHelper.Clamp(velocity.Y, -maxSpeed, maxSpeed);
             if ((position.X - Width / 2) <= 0)
@@ -96,8 +103,9 @@ namespace Rain.Objects
                 velocity.X = 0;
                 acceleration.X = 0;
             }
+            
 
-            if((Position.Y-Height/2)<= 30)
+          /*  if((Position.Y-Height/2)<= 30)
             {
                 position.Y += (Math.Abs(30 - (position.Y-Height / 2)) + 1);
                 velocity.Y = 0;
@@ -109,7 +117,7 @@ namespace Rain.Objects
                 velocity.Y = 0;
                 acceleration.Y = 0;
             }
-
+            */
         }
     }
 }

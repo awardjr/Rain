@@ -5,6 +5,10 @@
 	<Item>sprites/drop_moving/drop_move_1.png</Item>
 	<Item>sprites/drop_moving/drop_move_2.png</Item>
 	<Item>sprites/drop_moving/drop_move_3.png</Item>
-  <Item>sprites/droplets/droplet_1.png</Item>
+	<Item>sprites/droplets/droplet_1.png</Item>
+  <Item>sprites/droplets/acid.png</Item>
+	<Item>sprites/backgrounds/cloud1.png</Item>
+	<Item>sprites/backgrounds/cloud2.png</Item>
+	<Item>sprites/backgrounds/cloud3.png</Item>
 </Asset>
 </XnaContent>

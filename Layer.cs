@@ -99,7 +99,7 @@ namespace Rain
         //Get/Set Zorder
         public int ZOrder
         {
-            get { return layerZOrder * objects.Count; }
+            get { return layerZOrder; }
             set { layerZOrder = value; }
         }
 

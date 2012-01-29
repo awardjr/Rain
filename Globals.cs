@@ -26,13 +26,13 @@ namespace Rain
 
 
         //Width and height of a tile in pixels (depends on texture)
-        public const int TILE_WIDTH = 1;
+        public const int TILE_WIDTH =1;
 
         //Width of map in tiles
         public const int MAP_WIDTH = 480;
 
         //Height of map in tiles
-        public const int MAP_HEIGHT = 1000;
+        public const int MAP_HEIGHT = 90000;
         
         //Size of the margin beyond the map that the camera can move to
         public const float MAP_BOUNDING_MARGIN = 0f;

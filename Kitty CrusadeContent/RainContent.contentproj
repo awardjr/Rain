@@ -52,6 +52,7 @@
       <Name>sheet</Name>
       <Importer>XmlImporter</Importer>
       <Processor>SpriteSheetProcessor</Processor>
+      <SubType>Designer</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +118,20 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <SubType>Designer</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="background-01.png">
+      <Name>background-01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="sheet2.xml">
+      <Name>sheet2</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>SpriteSheetProcessor</Processor>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
