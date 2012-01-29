@@ -37,11 +37,13 @@ namespace Rain.Objects
             accel = 0.04f;
             decel = 0.55f;
             maxSpeed = 1;
+            acceleration.X = 0;
+            acceleration.Y = 1.3f;
         }
 
         public void addDrop()
         {
-            drops+=5;
+            drops+= 5;
         }
 
         public void addAcid()
@@ -55,23 +57,25 @@ namespace Rain.Objects
 
             if (controller.keyHeld(Keys.Left))
             {
-                drops-=0.09f;
+                drops-=0.03f;
                 flipHorizontally = SpriteEffects.FlipHorizontally;
-                acceleration.X -= accel;
+                if (acceleration.X > -1.0f)
+                    acceleration.X -= accel;
             }
             if (controller.keyHeld(Keys.Right))
             {
-                drops-=0.09f;
+                drops-=0.03f;
                 flipHorizontally = SpriteEffects.None;
-                acceleration.X += accel;
+                if (acceleration.X < 1.0f)
+                    acceleration.X += accel;
             }
 
-            if (controller.keyHeld(Keys.Down))
+            if (controller.keyHeld(Keys.Down) && acceleration.Y < 4.0f)
             {
                 acceleration.Y += accel;
             }
 
-            if (controller.keyHeld(Keys.Up))
+            if (controller.keyHeld(Keys.Up) && acceleration.Y > 1.3f)
             {
                 acceleration.Y -= accel;
             }
@@ -86,7 +90,8 @@ namespace Rain.Objects
                 this.setAnimation("moving");
             if (state == PlayerState.Stand)
                 this.setAnimation("stand");
-            acceleration.Y += 0.0002f;
+
+           // acceleration.Y += 0.0002f;
             position += acceleration;
             drops = MathHelper.Clamp(drops, 0, 500);
             velocity.X = MathHelper.Clamp(velocity.X, -maxSpeed, maxSpeed);
