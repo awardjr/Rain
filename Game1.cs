@@ -164,7 +164,7 @@ namespace Rain
             foreach (Line line in lines)
                 LineBatch.DrawLine(spriteBatch, camera, new Color(randomNum.Next(100, 255), randomNum.Next(255), randomNum.Next(255)), line);
 
-            spriteBatch.DrawString(font, "Hello World!", new Vector2(150, 150), Color.Yellow);
+          //  spriteBatch.DrawString(font, "Hello World!", new Vector2(150, 150), Color.Yellow);
 
             // DrawText();
             spriteBatch.End();
@@ -195,6 +195,7 @@ namespace Rain
         {
             player = new Player(new Vector2(100, 100), animationTables["player"], controller);
             player.setAnimation("stand");
+            player.ZOrder =1;
 
             layers.Add("main", new Layer(1f, 1f, 1)); 
             layers.Add("drops", new Layer(1f, 1f, 2));
@@ -204,40 +205,52 @@ namespace Rain
             layers.Add("cloud3", new Layer(1f, 1.1f, 3));
             layers.Add("cloud4", new Layer(1f, 1.5f, -1));
             layers.Add("acid", new Layer(1f, 1f, 1));
-
+            layers.Add("smokestack", new Layer(1f, 1f, -1));
+            layers.Add("building", new Layer(1f, 1f, -1));
             for (int i = 0; i < 1000; i++)
             {
                 layers["drops"].add(new Droplet(new Vector2(randomNum.Next(400) + 40, randomNum.Next(90000) + 100), animationTables["drops"]));
                
             }
 
-            for (int i = 0; i < 400; i++)
+            for (int i = 0; i < 450; i++)
             {
                 layers["acid"].add(new Droplet(new Vector2(randomNum.Next(400) + 40, randomNum.Next(90000) + 100), animationTables["acid"]));
 
             }
 
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < 32; i++)
             {
-                GameObject cloud = new GameObject(new Vector2(randomNum.Next(400) + 40, randomNum.Next(90000) + 100), animationTables["clouds"]);
+                GameObject cloud = new GameObject(new Vector2(randomNum.Next(400) + 40, randomNum.Next(90000) + 100), new AnimationTable(animationTables["clouds"]));
                 cloud.setAnimation("cloud1");
                 layers["cloud1"].add(cloud);
 
-                cloud = new GameObject(new Vector2(randomNum.Next(400) + 40, randomNum.Next(90000) + 100), animationTables["clouds"]);
+                cloud = new GameObject(new Vector2(randomNum.Next(400) + 40, randomNum.Next(90000) + 100), new AnimationTable(animationTables["clouds"]));
                 cloud.setAnimation("cloud2");
-                layers["cloud2"].add(new GameObject(new Vector2(randomNum.Next(400) + 40, randomNum.Next(90000) + 100), animationTables["clouds"]));
+                layers["cloud2"].add(new GameObject(new Vector2(randomNum.Next(400) + 40, randomNum.Next(90000) + 100), new AnimationTable(animationTables["clouds"])));
 
-                cloud = new GameObject(new Vector2(randomNum.Next(400) + 40, randomNum.Next(90000) + 100), animationTables["clouds"]);
+                cloud = new GameObject(new Vector2(randomNum.Next(400) + 40, randomNum.Next(90000) + 100), new AnimationTable(animationTables["clouds"]));
                 cloud.setAnimation("cloud3");
                 cloud.ZOrder = -1;
-                layers["cloud3"].add(new GameObject(new Vector2(randomNum.Next(400) + 40, randomNum.Next(90000) + 100), animationTables["clouds"]));
+                layers["cloud3"].add(new GameObject(new Vector2(randomNum.Next(400) + 40, randomNum.Next(90000) + 100), new AnimationTable(animationTables["clouds"])));
 
-                  cloud = new GameObject(new Vector2(randomNum.Next(400) + 40, randomNum.Next(90000) + 100), animationTables["clouds"]);
+                  cloud = new GameObject(new Vector2(randomNum.Next(400) + 40, randomNum.Next(90000) + 100), new AnimationTable(animationTables["clouds"]));
                 cloud.setAnimation("cloud2");
-                cloud.ZOrder = -2;
-                layers["cloud4"].add(new GameObject(new Vector2(randomNum.Next(400) + 40, randomNum.Next(90000) + 100), animationTables["clouds"]));
+                cloud.ZOrder = -1;
+                layers["cloud4"].add(new GameObject(new Vector2(randomNum.Next(400) + 40, randomNum.Next(90000) + 100), new AnimationTable(animationTables["clouds"])));
             }
- 
+            for (int i = 0; i < 10; i++)
+            {
+                GameObject smokestack = new GameObject(new Vector2(30, 10000+ (i*198)),new AnimationTable(animationTables["buildings"]));
+                smokestack.ZOrder = i;
+                smokestack.setAnimation("smokestack");
+                layers["smokestack"].add(smokestack);
+            }
+
+            GameObject building = new GameObject(new Vector2(240, 10000 +(11*198) -256), new AnimationTable(animationTables["buildings"]));
+            building.setAnimation("powerplant");
+            layers["building"].add(building);
+
             GameObject background = new GameObject(new Vector2(96, 0), animationTables["background"]);
             background.ZOrder = 1000000;
             layers["main"].add(player);
@@ -252,16 +265,27 @@ namespace Rain
             AnimationTable background = new AnimationTable(spritesheet2);
             AnimationTable clouds = new AnimationTable(spritesheet);
             AnimationTable acid = new AnimationTable(spritesheet);
+            AnimationTable buildings = new AnimationTable(spritesheet);
 
             player.addAnimation("stand", new Animation(new string[] { "drop_move_1" }, TimeSpan.FromMilliseconds(100)));
             player.addAnimation("moving", new Animation(new string[] { "drop_move_1", "drop_move_2", "drop_move_3" }, TimeSpan.FromMilliseconds(100)));
+            player.addAnimation("falling", new Animation(new string[] { "drop_fall_1", "drop_fall_2" }, TimeSpan.FromMilliseconds(100)));
+            player.addAnimation("splat", new Animation(new string[] { "drop_splat_1", "drop_splat_2", "drop_splat_3", "drop_splat_4", "drop_splat_5", "drop_splat_6"}, TimeSpan.FromMilliseconds(100)));
+
             ground.addAnimation("grass", new Animation(new string[] { "grass" }, TimeSpan.FromMilliseconds(50)));
             drops.addAnimation("drop_1", new Animation(new string[] { "droplet_1" }, TimeSpan.FromMilliseconds(50)));
             background.addAnimation("background1", new Animation(new string[] { "background-01" }, TimeSpan.FromMilliseconds(50)));
+
             clouds.addAnimation("cloud1", new Animation(new string[] { "cloud1" }, TimeSpan.FromMilliseconds(50)));
             clouds.addAnimation("cloud2", new Animation(new string[] { "cloud2" }, TimeSpan.FromMilliseconds(50)));
             clouds.addAnimation("cloud3", new Animation(new string[] { "cloud3" }, TimeSpan.FromMilliseconds(50)));
+
             acid.addAnimation("acid", new Animation(new string[] { "acid" }, TimeSpan.FromMilliseconds(50)));
+
+            buildings.addAnimation("smokestack", new Animation(new string[] { "smokestack" }, TimeSpan.FromMilliseconds(100)));
+            buildings.addAnimation("powerplant", new Animation(new string[] { "powerplant" }, TimeSpan.FromMilliseconds(100)));
+            buildings.addAnimation("building1", new Animation(new string[] { "building-02" }, TimeSpan.FromMilliseconds(100)));
+            buildings.addAnimation("building2", new Animation(new string[] { "building-03" }, TimeSpan.FromMilliseconds(100)));
 
             animationTables.Add("player", player);
             animationTables.Add("ground", ground);
@@ -269,12 +293,14 @@ namespace Rain
             animationTables.Add("background", background);
             animationTables.Add("clouds", clouds);
             animationTables.Add("acid", acid);
+            animationTables.Add("buildings", buildings);
         }
 
         protected void updateCamera(GameTime gameTime)
         {
             camera.Position = (new Vector2(player.Position.X - 360, player.Position.Y - 240));
             camera.update(gameTime);
+            Console.Out.WriteLine(camera.Position);
         }
 
         protected void handleControls(GameTime gameTime)

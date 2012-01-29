@@ -43,12 +43,12 @@ namespace Rain.Objects
 
         public void addDrop()
         {
-            drops+= 5;
+            drops+= 3;
         }
 
         public void addAcid()
         {
-            drops -= 10;
+            drops -= 6;
         }
 
         public override void update(GameTime gametime)
@@ -58,13 +58,16 @@ namespace Rain.Objects
             if (controller.keyHeld(Keys.Left))
             {
                 drops-=0.03f;
+                setAnimation("moving");
                 flipHorizontally = SpriteEffects.FlipHorizontally;
                 if (acceleration.X > -1.0f)
                     acceleration.X -= accel;
+
             }
             if (controller.keyHeld(Keys.Right))
             {
                 drops-=0.03f;
+                setAnimation("moving");
                 flipHorizontally = SpriteEffects.None;
                 if (acceleration.X < 1.0f)
                     acceleration.X += accel;
@@ -73,6 +76,7 @@ namespace Rain.Objects
             if (controller.keyHeld(Keys.Down) && acceleration.Y < 4.0f)
             {
                 acceleration.Y += accel;
+                
             }
 
             if (controller.keyHeld(Keys.Up) && acceleration.Y > 1.3f)
@@ -80,16 +84,20 @@ namespace Rain.Objects
                 acceleration.Y -= accel;
             }
 
+            if (controller.keyHeld(Keys.Down))
+            {
+                this.setAnimation("falling");
+            }
 
-            if (velocity.Length() > 0)
-                state = PlayerState.Walking;
-            if (velocity.Length() == 0)
-                state = PlayerState.Stand;
+          //  if (velocity.Length() > 0)
+            //    state = PlayerState.Walking;
+          //  if (velocity.Length() == 0)
+           //     state = PlayerState.Stand;
 
-            if (state == PlayerState.Walking)
-                this.setAnimation("moving");
-            if (state == PlayerState.Stand)
-                this.setAnimation("stand");
+           // if (state == PlayerState.Walking)
+                
+           // if (state == PlayerState.Stand)
+             //   this.setAnimation("stand");
 
            // acceleration.Y += 0.0002f;
             position += acceleration;
@@ -109,6 +117,7 @@ namespace Rain.Objects
                 acceleration.X = 0;
             }
             
+           
 
           /*  if((Position.Y-Height/2)<= 30)
             {
