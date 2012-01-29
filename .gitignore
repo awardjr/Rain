@@ -29,10 +29,5 @@ Thumbs.db
 obj/
 [Rr]elease*/
 _ReSharper*/
-<<<<<<< HEAD
-[Tt]est[Rr]esult*
-=======
-[Tt]est[Rr]esult*
->>>>>>> 741b4849d8ba68684f788613bf6555d6098fa88c
-
 obj/x86/Debug/Kitty Crusade.pdb
+bin/x86/Debug/Kitty Crusade.exe
