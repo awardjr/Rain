@@ -206,7 +206,7 @@ namespace Rain
             layers.Add("cloud4", new Layer(1f, 1.5f, -1));
             layers.Add("acid", new Layer(1f, 1f, 1));
             layers.Add("smokestack", new Layer(1f, 1f, -1));
-
+            layers.Add("building", new Layer(1f, 1f, -1));
             for (int i = 0; i < 1000; i++)
             {
                 layers["drops"].add(new Droplet(new Vector2(randomNum.Next(400) + 40, randomNum.Next(90000) + 100), animationTables["drops"]));
@@ -249,7 +249,7 @@ namespace Rain
 
             GameObject building = new GameObject(new Vector2(240, 10000 +(11*198) -256), new AnimationTable(animationTables["buildings"]));
             building.setAnimation("powerplant");
-            layers["smokestack"].add(building);
+            layers["building"].add(building);
 
             GameObject background = new GameObject(new Vector2(96, 0), animationTables["background"]);
             background.ZOrder = 1000000;
