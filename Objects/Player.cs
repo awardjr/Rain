@@ -24,6 +24,7 @@ namespace Rain.Objects
         float accel;
         float decel;
         float maxSpeed;
+        Vector2 gravity;
         PlayerState state;
         int drops;
         
@@ -36,6 +37,7 @@ namespace Rain.Objects
             drops = 0;
             accel = 0.1f;
             decel = 0.01f;
+            gravity = new Vector2(0, 0.001f);
             rotation = 1f;
             maxSpeed = 1;
         }
@@ -71,7 +73,7 @@ namespace Rain.Objects
             if(state == PlayerState.Stand)
                 this.setAnimation("stand");
 
-            velocity += acceleration;
+            velocity += acceleration + gravity;
             position += velocity;
             velocity.X = MathHelper.Clamp(velocity.X, -maxSpeed, maxSpeed);
             if (position.X < 0)

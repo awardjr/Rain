@@ -189,10 +189,9 @@ namespace Rain
             layers.Add("main", new Layer(1f, 1f, 1));
             layers.Add("drops", new Layer(1f, 1f, 1));
 
-            for (int i = 0; i < 100; i++)
-            {
-                layers["drops"].add(new Droplet(new Vector2(i*32, 100),animationTables["drops"]));
-            }
+            for (int i = 0; i < 1000; i++)
+                layers["drops"].add(new Droplet(new Vector2(randomNum.Next(400)+40, randomNum.Next(90000)+100),animationTables["drops"]));
+            
             layers["main"].add(player);
         }
 
