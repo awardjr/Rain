@@ -1,3 +1,0 @@
-c:\users\latio\documents\visual studio 2010\Projects\Kitty Crusade\Kitty Crusade\Kitty CrusadeContent\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Latio\Documents\Visual Studio 2010\Projects\Kitty Crusade\Kitty Crusade\Kitty Crusade\Kitty CrusadeContent\obj\x86\Debug\ResolveAssemblyReference.cache
-D:\Code\Rain\Kitty CrusadeContent\obj\x86\Debug\ResolveAssemblyReference.cache

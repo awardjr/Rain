@@ -1,2 +1,0 @@
-D:\Code\Rain\Kitty CrusadeContent\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Peace\Desktop\Rain\Rain\Kitty CrusadeContent\obj\x86\Debug\ResolveAssemblyReference.cache
