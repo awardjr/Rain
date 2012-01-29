@@ -48,7 +48,7 @@ namespace Rain.Objects
         public override void update(GameTime gametime)
         {
             scale = (drops * 0.01f) + 0.1f;
-            
+
             if (controller.keyHeld(Keys.Left))
             {
                 flipHorizontally = SpriteEffects.FlipHorizontally;
@@ -60,24 +60,32 @@ namespace Rain.Objects
                 acceleration.X += accel;
             }
 
-          
+
             if (velocity.Length() > 0)
                 state = PlayerState.Walking;
             if (velocity.Length() == 0)
                 state = PlayerState.Stand;
 
-            if(state == PlayerState.Walking)
+            if (state == PlayerState.Walking)
                 this.setAnimation("moving");
-            if(state == PlayerState.Stand)
+            if (state == PlayerState.Stand)
                 this.setAnimation("stand");
 
             velocity += acceleration;
             position += velocity;
             velocity.X = MathHelper.Clamp(velocity.X, -maxSpeed, maxSpeed);
-            if (position.X < 0)
-                position.X = 0;
-            if (position.X > 480)
-                position.X = 480;
+            if ((position.X-Width/2) <= 0)
+            {
+                position.X += (Math.Abs(position.X-Width / 2) + 1);
+                velocity.X = 0;
+                acceleration.X = 0;
             }
+            if ((position.X+Width/2) >= 480)
+            {
+                position.X -= ((position.X + Width/2 - 480) + 1);
+                velocity.X = 0;
+                acceleration.X = 0;
+            }
+        }
     }
 }
