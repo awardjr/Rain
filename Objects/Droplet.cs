@@ -9,6 +9,6 @@ namespace Rain.Objects
     class Droplet : GameObject
     {
         public Droplet(Vector2 initPos, AnimationTable initAnimationTable)
-            : base(initPos, initAnimationTable, ObjectType.Drops) { }
+            : base(initPos, initAnimationTable, ObjectType.Drops) { scale = 0.5f; }
     }
 }
