@@ -10,10 +10,10 @@ namespace Rain
         public static int SCROLL_VALUE;
 
         //Horizontal resolution
-        public static float RES_H = 720;
+        public static float RES_H = 480;
 
         //Vertical resolution
-        public static float RES_V  = 480;
+        public static float RES_V  = 720;
 
         //Camera Move Rate
         public static float CAMERA_MOVE_RATE = 1.5f;
@@ -26,16 +26,16 @@ namespace Rain
 
 
         //Width and height of a tile in pixels (depends on texture)
-        public const int TILE_WIDTH = 25;
+        public const int TILE_WIDTH = 1;
 
         //Width of map in tiles
-        public const int MAP_WIDTH = 100;
+        public const int MAP_WIDTH = 480;
 
         //Height of map in tiles
-        public const int MAP_HEIGHT = 100;
+        public const int MAP_HEIGHT = 1000;
         
         //Size of the margin beyond the map that the camera can move to
-        public const float MAP_BOUNDING_MARGIN = 100f;
+        public const float MAP_BOUNDING_MARGIN = 0f;
 
         //Bounds of camera scale
         public const float MAP_SCALE_MIN = 0.75f;

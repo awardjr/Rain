@@ -20,6 +20,10 @@ namespace Rain.Objects
         enum PlayerState { Stand, Walking, Jumping };
         Controller controller;
         Vector2 velocity;
+        Vector2 acceleration;
+        float accel;
+        float decel;
+        float maxSpeed;
         PlayerState state;
         int drops;
         
@@ -28,8 +32,12 @@ namespace Rain.Objects
         {
             position = initPos;
             controller = pController;
-            scale = 0.2f;
+            scale = 0.1f;
             drops = 0;
+            accel = 0.1f;
+            decel = 0.01f;
+            rotation = 1f;
+            maxSpeed = 1;
         }
 
         public void addDrop()
@@ -39,18 +47,20 @@ namespace Rain.Objects
 
         public override void update(GameTime gametime)
         {
-            scale = (drops * 0.01f) + 0.2f;
+            scale = (drops * 0.01f) + 0.1f;
             
             if (controller.keyHeld(Keys.Left))
             {
                 flipHorizontally = SpriteEffects.FlipHorizontally;
-                velocity.X -= 2f;
+                acceleration.X -= accel;
             }
             if (controller.keyHeld(Keys.Right))
             {
-                velocity.X += 2f;
                 flipHorizontally = SpriteEffects.None;
+                acceleration.X += accel;
             }
+
+          
             if (velocity.Length() > 0)
                 state = PlayerState.Walking;
             if (velocity.Length() == 0)
@@ -61,12 +71,13 @@ namespace Rain.Objects
             if(state == PlayerState.Stand)
                 this.setAnimation("stand");
 
-
+            velocity += acceleration;
             position += velocity;
-            velocity.X = 0;
-
-            
-            
-        }
+            velocity.X = MathHelper.Clamp(velocity.X, -maxSpeed, maxSpeed);
+            if (position.X < 0)
+                position.X = 0;
+            if (position.X > 480)
+                position.X = 480;
+            }
     }
 }

@@ -112,8 +112,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FromWhereYouAre.spritefont">
-      <Name>FromWhereYouAre</Name>
+    <Compile Include="FromWhere.spritefont">
+      <Name>FromWhere</Name>
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <SubType>Designer</SubType>

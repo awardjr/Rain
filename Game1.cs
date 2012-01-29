@@ -44,6 +44,8 @@ namespace Rain
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
+            graphics.PreferredBackBufferHeight = 720;
+            graphics.PreferredBackBufferWidth = 480;
             Content.RootDirectory = "Content";
         }
 
@@ -59,7 +61,7 @@ namespace Rain
 
           //  CMainMenuState _MainMenu = new CMainMenuState();
           //  _MainMenu.Enter();
-
+           
             CGamePlayState _GamePlay = new CGamePlayState();
              _GamePlay.Enter();
             _StateMachine = new CStateMachine();
@@ -86,7 +88,7 @@ namespace Rain
 
             spritesheet = Content.Load<SpriteSheet>("sheet");
             loadAnimationTables();
-            font = Content.Load<SpriteFont>("FromWhereYouAre");
+            font = Content.Load<SpriteFont>("FromWhere");
            
             loadLayers();
 
