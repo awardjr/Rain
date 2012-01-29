@@ -186,7 +186,7 @@ namespace Rain
             player = new Player(new Vector2(100, 100), animationTables["player"], controller);
             player.setAnimation("stand");
 
-            layers.Add("main", new Layer(1f, 1f, 1));
+            layers.Add("main", new Layer(1f, 1f, 1)); 
             layers.Add("drops", new Layer(1f, 1f, 1));
 
             for (int i = 0; i < 1000; i++)

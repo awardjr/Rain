@@ -24,7 +24,6 @@ namespace Rain.Objects
         float accel;
         float decel;
         float maxSpeed;
-        Vector2 gravity;
         PlayerState state;
         int drops;
         
@@ -35,9 +34,8 @@ namespace Rain.Objects
             controller = pController;
             scale = 0.1f;
             drops = 0;
-            accel = 0.1f;
-            decel = 0.01f;
-            gravity = new Vector2(0, 0.001f);
+            accel = 0.04f;
+            decel = 0.55f;
             rotation = 1f;
             maxSpeed = 1;
         }
@@ -50,7 +48,7 @@ namespace Rain.Objects
         public override void update(GameTime gametime)
         {
             scale = (drops * 0.01f) + 0.1f;
-            
+
             if (controller.keyHeld(Keys.Left))
             {
                 flipHorizontally = SpriteEffects.FlipHorizontally;
@@ -62,24 +60,56 @@ namespace Rain.Objects
                 acceleration.X += accel;
             }
 
-          
+            if (controller.keyHeld(Keys.Down))
+            {
+                acceleration.Y += accel;
+            }
+
+            if (controller.keyHeld(Keys.Up))
+            {
+                acceleration.Y -= accel;
+            }
+
+
             if (velocity.Length() > 0)
                 state = PlayerState.Walking;
             if (velocity.Length() == 0)
                 state = PlayerState.Stand;
 
-            if(state == PlayerState.Walking)
+            if (state == PlayerState.Walking)
                 this.setAnimation("moving");
-            if(state == PlayerState.Stand)
+            if (state == PlayerState.Stand)
                 this.setAnimation("stand");
 
-            velocity += acceleration + gravity;
-            position += velocity;
+            position += acceleration;
             velocity.X = MathHelper.Clamp(velocity.X, -maxSpeed, maxSpeed);
-            if (position.X < 0)
-                position.X = 0;
-            if (position.X > 480)
-                position.X = 480;
+            velocity.Y = MathHelper.Clamp(velocity.Y, -maxSpeed, maxSpeed);
+            if ((position.X - Width / 2) <= 0)
+            {
+                position.X += (Math.Abs(position.X-Width / 2) + 1);
+                velocity.X = 0;
+                acceleration.X = 0;
             }
+            if ((position.X+Width/2) >= 480)
+            {
+                position.X -= ((position.X + Width/2 - 480) + 1);
+                velocity.X = 0;
+                acceleration.X = 0;
+            }
+
+            if((Position.Y-Height/2)<= 30)
+            {
+                position.Y += (Math.Abs(30 - (position.Y-Height / 2)) + 1);
+                velocity.Y = 0;
+                acceleration.Y = 0;
+            }
+             if ((position.Y+Height/2) >= 700)
+            {
+                position.Y -= ((position.Y + Height/2 - 700) + 1);
+                velocity.Y = 0;
+                acceleration.Y = 0;
+            }
+
+        }
     }
 }
