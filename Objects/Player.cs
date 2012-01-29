@@ -86,7 +86,7 @@ namespace Rain.Objects
                 this.setAnimation("moving");
             if (state == PlayerState.Stand)
                 this.setAnimation("stand");
-
+            acceleration.Y += 0.0002f;
             position += acceleration;
             drops = MathHelper.Clamp(drops, 0, 500);
             velocity.X = MathHelper.Clamp(velocity.X, -maxSpeed, maxSpeed);
@@ -103,6 +103,7 @@ namespace Rain.Objects
                 velocity.X = 0;
                 acceleration.X = 0;
             }
+            
 
           /*  if((Position.Y-Height/2)<= 30)
             {

@@ -199,9 +199,10 @@ namespace Rain
             layers.Add("main", new Layer(1f, 1f, 1)); 
             layers.Add("drops", new Layer(1f, 1f, 2));
             layers.Add("background", new Layer(1f, 0.01f, 1));
-            layers.Add("cloud1", new Layer(1f, 0.1f, 1));
-            layers.Add("cloud2", new Layer(1f, 0.5f, 1));
-            layers.Add("cloud3", new Layer(1f, 0.8f, 1));
+            layers.Add("cloud1", new Layer(1f, 0.1f, 10));
+            layers.Add("cloud2", new Layer(1f, 0.6f, 5));
+            layers.Add("cloud3", new Layer(1f, 1.1f, 3));
+            layers.Add("cloud4", new Layer(1f, 1.5f, -1));
             layers.Add("acid", new Layer(1f, 1f, 1));
 
             for (int i = 0; i < 1000; i++)
@@ -216,7 +217,7 @@ namespace Rain
 
             }
 
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < 30; i++)
             {
                 GameObject cloud = new GameObject(new Vector2(randomNum.Next(400) + 40, randomNum.Next(90000) + 100), animationTables["clouds"]);
                 cloud.setAnimation("cloud1");
@@ -228,7 +229,13 @@ namespace Rain
 
                 cloud = new GameObject(new Vector2(randomNum.Next(400) + 40, randomNum.Next(90000) + 100), animationTables["clouds"]);
                 cloud.setAnimation("cloud3");
+                cloud.ZOrder = -1;
                 layers["cloud3"].add(new GameObject(new Vector2(randomNum.Next(400) + 40, randomNum.Next(90000) + 100), animationTables["clouds"]));
+
+                  cloud = new GameObject(new Vector2(randomNum.Next(400) + 40, randomNum.Next(90000) + 100), animationTables["clouds"]);
+                cloud.setAnimation("cloud2");
+                cloud.ZOrder = -2;
+                layers["cloud4"].add(new GameObject(new Vector2(randomNum.Next(400) + 40, randomNum.Next(90000) + 100), animationTables["clouds"]));
             }
  
             GameObject background = new GameObject(new Vector2(96, 0), animationTables["background"]);
